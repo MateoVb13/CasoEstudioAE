@@ -1,9 +1,9 @@
 # Taller #3 - Fase de Visión y Arquitectura de Negocio (TOGAF)
 
-Integrantes: 
-Juan Esteban Morales Peñate
-Ronal Andres Bello Ruiz
-Tomas Alfonso Madariaga Suarez
+### Integrantes: <br>
+Juan Esteban Morales Peñate<br>
+Ronal Andres Bello Ruiz<br>
+Tomas Alfonso Madariaga Suarez<br>
 Mateo David Villalobos Bertel
 # Punto 1 - Visión de la Arquitectura (Canvas)
 
