@@ -118,3 +118,51 @@ El uso de contenedores Docker facilita el despliegue, escalado y aislamiento de 
 ### Servicios Externos
 - **Wompi API**: Pasarela de pago externa para procesar transacciones de manera segura
 
+# Punto 4 — Justificación de las Decisiones Tecnológicas
+
+## Descripción
+
+La arquitectura tecnológica propuesta para **Sucre TravelTech S.A.S.** fue diseñada para soportar los procesos y capacidades de negocio definidos en las fases anteriores de la Arquitectura Empresarial. La selección de cada componente busca garantizar una solución segura, escalable y alineada con las necesidades de la plataforma turística.
+
+## Justificación de las Tecnologías Utilizadas
+
+### React.js (Frontend)
+Se seleccionó **React.js** para el desarrollo de la interfaz de usuario debido a que permite crear aplicaciones web dinámicas, intuitivas y reutilizables. Esto facilita que turistas y prestadores de servicios interactúen con la plataforma de forma sencilla y mejora la experiencia de navegación.
+
+### Node.js + Express (Backend)
+El **Backend** se implementa con **Node.js y Express** porque ofrecen un entorno eficiente para desarrollar servicios web y APIs REST. Esta tecnología permite gestionar la lógica del negocio, el procesamiento de reservas, la autenticación de usuarios y la integración con servicios externos como la pasarela de pago.
+
+### PostgreSQL (Base de Datos)
+Se utiliza **PostgreSQL** como sistema gestor de bases de datos debido a su estabilidad, seguridad y capacidad para manejar transacciones. Este componente almacena la información relacionada con usuarios, prestadores, servicios turísticos, reservas y pagos, garantizando la integridad de los datos.
+
+### Nginx (Servidor Web y Balanceador de Carga)
+**Nginx** cumple dos funciones dentro de la arquitectura:
+- Como **servidor web**, se encarga de atender las solicitudes de los usuarios y servir la aplicación.
+- Como **balanceador de carga**, distribuye el tráfico entre los servicios disponibles, mejorando el rendimiento y la disponibilidad de la plataforma.
+
+### AWS EC2 (Infraestructura Cloud)
+La infraestructura se despliega sobre **AWS EC2**, ya que proporciona un entorno flexible y escalable para alojar la aplicación. Esta solución permite aumentar la capacidad de procesamiento conforme crezca el número de usuarios y prestadores registrados en la plataforma.
+
+### AWS S3 (Almacenamiento)
+El servicio **AWS S3** se utiliza para almacenar imágenes, documentos y archivos relacionados con los servicios turísticos. Esta alternativa evita sobrecargar la base de datos y ofrece un almacenamiento seguro, disponible y de alta durabilidad.
+
+### JWT (Autenticación)
+La autenticación mediante **JSON Web Token (JWT)** permite implementar un mecanismo seguro de identificación y autorización de usuarios. Gracias a esta tecnología, el sistema puede validar el acceso a las funcionalidades de la plataforma sin comprometer la seguridad de la información.
+
+### Wompi (Pasarela de Pago)
+Se eligió **Wompi** como pasarela de pago porque ofrece una integración sencilla con aplicaciones web y permite procesar pagos electrónicos de manera segura y confiable, facilitando las transacciones asociadas a las reservas realizadas por los turistas.
+
+### Firewall y Security Groups
+La incorporación de **Firewall y Security Groups** permite proteger la infraestructura frente a accesos no autorizados, controlando el tráfico que ingresa a la plataforma y fortaleciendo la seguridad de la solución.
+
+---
+
+## Relación entre la Arquitectura Tecnológica y el Negocio
+
+La combinación de estas tecnologías permite soportar los procesos principales identificados en la Arquitectura de Negocio, como la gestión de prestadores, la administración de servicios turísticos, la gestión de reservas, el procesamiento de pagos y la atención al cliente.
+
+Además, la utilización de servicios cloud y componentes especializados facilita el crecimiento futuro de la plataforma, permitiendo incorporar nuevos usuarios, prestadores y funcionalidades sin afectar la operación del sistema.
+
+## Conclusión
+
+Las decisiones tecnológicas adoptadas responden a las necesidades funcionales y estratégicas de **Sucre TravelTech S.A.S.**. La arquitectura propuesta integra herramientas modernas y servicios escalables que garantizan seguridad, disponibilidad y un adecuado soporte para la transformación digital del ecosistema turístico del departamento de Sucre.
